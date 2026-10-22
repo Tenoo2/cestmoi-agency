@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C’EST MOI Creative Agency | Bielefeld</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#141414',
+                        cardBorder: '#262626',
+                        accent: '#ffffff',
+                        muted: '#a3a3a3'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-white antialiased selection:bg-white selection:text-black flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/WhatsApp Image 2026-07-23 at 14.01.15_3.jpeg" alt="C'EST MOI Logo" class="h-10 w-10 object-contain rounded-full border border-cardBorder">
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-black tracking-widest uppercase">C’EST MOI</span>
+                    <span class="text-[10px] sm:text-xs tracking-widest text-muted uppercase font-semibold">Creative Agency · Bielefeld</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="transition-colors text-muted hover:text-white">Home</a>
+                <a href="leistungen.html" class="transition-colors text-muted hover:text-white">Leistungen</a>
+                <a href="referenzen.html" class="transition-colors text-white font-semibold">Referenzen</a>
+                <a href="creators.html" class="transition-colors text-muted hover:text-white">Creators</a>
+                <a href="ueber-uns.html" class="transition-colors text-muted hover:text-white">Über uns</a>
+                <a href="kontakt.html" class="transition-colors text-muted hover:text-white">Kontakt</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="kontakt.html?subject=Projekt starten" class="bg-white text-black font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-neutral-200 transition-all shadow-lg">
+                    Projekt starten
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Menü öffnen" class="lg:hidden p-2 text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-cardBg border-b border-cardBorder p-6 shadow-2xl fade-in">
+            <nav class="flex flex-col space-y-4 text-base font-medium">
+                <a href="index.html" class="block py-2 text-muted hover:text-white pl-3">Home</a>
+                <a href="leistungen.html" class="block py-2 text-muted hover:text-white pl-3">Leistungen</a>
+                <a href="referenzen.html" class="block py-2 text-white font-semibold border-l-2 border-white pl-3">Referenzen</a>
+                <a href="creators.html" class="block py-2 text-muted hover:text-white pl-3">Creators</a>
+                <a href="ueber-uns.html" class="block py-2 text-muted hover:text-white pl-3">Über uns</a>
+                <a href="kontakt.html" class="block py-2 text-muted hover:text-white pl-3">Kontakt</a>
+                <div class="pt-4 border-t border-cardBorder">
+                    <a href="kontakt.html?subject=Projekt starten" class="block text-center bg-white text-black font-semibold py-3 rounded-full text-sm">
+                        Projekt starten
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="py-16 bg-cardBg border-b border-cardBorder">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <span class="text-xs uppercase tracking-widest text-muted font-semibold block mb-2">Portfolio</span>
+                <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-4">Alle Referenzen</h1>
+                <p class="text-muted text-base max-w-2xl mx-auto">Eine Auswahl unserer umgesetzten Foto-, Video- und Kampagnenarbeiten.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterRefs('all')" class="filter-btn active bg-white text-black text-xs font-semibold px-6 py-2.5 rounded-full uppercase transition">Alle</button>
+                <button onclick="filterRefs('music')" class="filter-btn bg-cardBg border border-cardBorder text-muted hover:text-white text-xs font-semibold px-6 py-2.5 rounded-full uppercase transition">Musikvideos</button>
+                <button onclick="filterRefs('commercial')" class="filter-btn bg-cardBg border border-cardBorder text-muted hover:text-white text-xs font-semibold px-6 py-2.5 rounded-full uppercase transition">Commercials</button>
+                <button onclick="filterRefs('portrait')" class="filter-btn bg-cardBg border border-cardBorder text-muted hover:text-white text-xs font-semibold px-6 py-2.5 rounded-full uppercase transition">Portraits</button>
+                <button onclick="filterRefs('social')" class="filter-btn bg-cardBg border border-cardBorder text-muted hover:text-white text-xs font-semibold px-6 py-2.5 rounded-full uppercase transition">Social Media</button>
+            </div>
+
+            <!-- Video Showcase Section -->
+            <div class="mb-16 bg-cardBg border border-cardBorder p-8 rounded-3xl">
+                <h2 class="text-2xl font-bold uppercase mb-6">Video-Produktionen & Reels</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <p class="text-sm font-semibold mb-2">Car & Night Video Clip</p>
+                        <video controls poster="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (3)_3.jpg" class="w-full rounded-2xl shadow-xl h-96 object-cover">
+                            <source src="assets/videos/Instagram (1)_3.mp4" type="video/mp4">
+                            Ihr Browser unterstützt kein Video-Tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold mb-2">Social Reel — Portofino Campaign</p>
+                        <video controls poster="assets/images/WhatsApp Image 2026-09-29 at 20.39.05_3.jpeg" class="w-full rounded-2xl shadow-xl h-96 object-cover">
+                            <source src="assets/videos/Instagram (2)_3.mp4" type="video/mp4">
+                            Ihr Browser unterstützt kein Video-Tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold mb-2">Musikvideo Production ("Es tut mir leid")</p>
+                        <video controls poster="assets/images/WhatsApp Image 2026-09-29 at 20.39.26_3.jpg" class="w-full rounded-2xl shadow-xl h-96 object-cover">
+                            <source src="assets/videos/Instagram_3.mp4" type="video/mp4">
+                            Ihr Browser unterstützt kein Video-Tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reference Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="music" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg', 'Musikvideo & Art Direction — Ela')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg" alt="Ela Studio Shoot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Ela</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Musikvideo & Art Direction</h3>
+                        <p class="text-xs text-muted leading-relaxed">Atmosphärisches Musikvideo mit rotem Lichtset.</p>
+                    </div>
+                </div>
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="portrait" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (2)_4.jpg', 'Portrait & Brand Shoot')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (2)_4.jpg" alt="Portrait Silhouette" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Creative Portrait</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Portrait & Brand Shoot</h3>
+                        <p class="text-xs text-muted leading-relaxed">Kraftvolle Studioaufnahmen in blauem Tonwert.</p>
+                    </div>
+                </div>
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="music" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (3)_3.jpg', 'Artist Campaign & Clip')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (3)_3.jpg" alt="Studio Car Shoot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Music Artist</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Artist Campaign & Clip</h3>
+                        <p class="text-xs text-muted leading-relaxed">High-End Videoproduktion im industriellen Look.</p>
+                    </div>
+                </div>
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="commercial" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.42.05_3.jpeg', 'Model Casting & Fashion')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.42.05_3.jpeg" alt="Polo Shirt Model" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Fashion Brand</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Model Casting & Fashion</h3>
+                        <p class="text-xs text-muted leading-relaxed">Clean Studio-Fotografie für Fashion und Kataloge.</p>
+                    </div>
+                </div>
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="commercial" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.39.05_3.jpeg', 'Commercial Content')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.39.05_3.jpeg" alt="Pink Dress Model" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">High Fashion</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Commercial Content</h3>
+                        <p class="text-xs text-muted leading-relaxed">Moderne High-Fashion Aufnahmen mit knalligen Farben.</p>
+                    </div>
+                </div>
+                <div class="ref-item group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" data-category="social" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.39.26_3.jpg', 'Single Cover & Release')">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.39.26_3.jpg" alt="Es tut mir leid Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Release Campaign</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Single Cover & Artwork</h3>
+                        <p class="text-xs text-muted leading-relaxed">Cover Artwork & Visual Branding für Musiktitel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function filterRefs(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-black');
+                btn.classList.add('bg-cardBg', 'border', 'cardBorder', 'text-muted');
+            });
+            if (event && event.target) {
+                event.target.classList.add('bg-white', 'text-black');
+                event.target.classList.remove('bg-cardBg', 'border', 'cardBorder', 'text-muted');
+            }
+            document.querySelectorAll('.ref-item').forEach(item => {
+                if (cat === 'all' || item.getAttribute('data-category') === cat) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="bg-cardBg border-t border-cardBorder mt-20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <span class="text-xl font-black tracking-widest uppercase block mb-3">C’EST MOI</span>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        Creative Agency mit Sitz in Bielefeld. Wir entwickeln Auftritte, die nicht nur gut aussehen, sondern im Kopf bleiben.
+                    </p>
+                    <div class="text-xs text-muted">
+                        © 2026 C’EST MOI Agency.<br>Alle Rechte vorbehalten.
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="leistungen.html" class="hover:text-white transition">Leistungen</a></li>
+                        <li><a href="referenzen.html" class="hover:text-white transition">Referenzen</a></li>
+                        <li><a href="creators.html" class="hover:text-white transition">Creators & Models</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Agentur & Rechtliches</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="ueber-uns.html" class="hover:text-white transition">Über uns</a></li>
+                        <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Kontakt & Social</h4>
+                    <p class="text-sm text-muted mb-2">Bielefeld, Deutschland</p>
+                    <p class="text-sm text-muted mb-4">E-Mail: kontakt@cestmoi-agency.de</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-sm text-white bg-neutral-800 hover:bg-neutral-700 px-3 py-1.5 rounded-md transition">Instagram @cestmoiagency</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-cardBorder pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-muted">
+                <p>Multi-Page Implementation • C’EST MOI Creative Agency</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="impressum.html" class="hover:text-white transition">Impressum</a>
+                    <a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-bold bg-neutral-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-neutral-700 transition">&times;</button>
+        <div class="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Vollansicht" class="max-h-[75vh] object-contain rounded-lg shadow-2xl mb-4">
+            <p id="lightbox-caption" class="text-neutral-300 text-center text-sm font-medium"></p>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            if (lb && img) {
+                img.src = src;
+                cap.textContent = caption;
+                lb.classList.remove('hidden');
+                lb.classList.add('flex');
+            }
+        }
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            if (lb) {
+                lb.classList.add('hidden');
+                lb.classList.remove('flex');
+            }
+        }
+    </script>
+</body>
+</html>
