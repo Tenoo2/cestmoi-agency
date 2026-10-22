@@ -1,250 +1,333 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C'EST MOI — Creative Agency Bielefeld</title>
-  <meta name="description" content="C'EST MOI ist eine Creative Agency aus Bielefeld für Content, Film, Web und Performance.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C’EST MOI Creative Agency | Bielefeld</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#141414',
+                        cardBorder: '#262626',
+                        accent: '#ffffff',
+                        muted: '#a3a3a3'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <div class="page-transition"></div>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index.html">
-        <span class="logo-mark">C'EST MOI</span>
-        <span class="logo-sub">— AGENCY —</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-      <nav class="site-nav" aria-label="Hauptnavigation">
-        <a class="is-active" href="index.html">Home</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber-uns.html">Über uns</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a class="btn btn-small" href="kontakt.html">Projekt starten</a>
-      </nav>
+<body class="bg-darkBg text-white antialiased selection:bg-white selection:text-black flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/WhatsApp Image 2026-07-23 at 14.01.15_3.jpeg" alt="C'EST MOI Logo" class="h-10 w-10 object-contain rounded-full border border-cardBorder">
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-black tracking-widest uppercase">C’EST MOI</span>
+                    <span class="text-[10px] sm:text-xs tracking-widest text-muted uppercase font-semibold">Creative Agency · Bielefeld</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="transition-colors text-white font-semibold">Home</a>
+                <a href="leistungen.html" class="transition-colors text-muted hover:text-white">Leistungen</a>
+                <a href="referenzen.html" class="transition-colors text-muted hover:text-white">Referenzen</a>
+                <a href="creators.html" class="transition-colors text-muted hover:text-white">Creators</a>
+                <a href="ueber-uns.html" class="transition-colors text-muted hover:text-white">Über uns</a>
+                <a href="kontakt.html" class="transition-colors text-muted hover:text-white">Kontakt</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="kontakt.html?subject=Projekt starten" class="bg-white text-black font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-neutral-200 transition-all shadow-lg">
+                    Projekt starten
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Menü öffnen" class="lg:hidden p-2 text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-cardBg border-b border-cardBorder p-6 shadow-2xl fade-in">
+            <nav class="flex flex-col space-y-4 text-base font-medium">
+                <a href="index.html" class="block py-2 text-white font-semibold border-l-2 border-white pl-3">Home</a>
+                <a href="leistungen.html" class="block py-2 text-muted hover:text-white pl-3">Leistungen</a>
+                <a href="referenzen.html" class="block py-2 text-muted hover:text-white pl-3">Referenzen</a>
+                <a href="creators.html" class="block py-2 text-muted hover:text-white pl-3">Creators</a>
+                <a href="ueber-uns.html" class="block py-2 text-muted hover:text-white pl-3">Über uns</a>
+                <a href="kontakt.html" class="block py-2 text-muted hover:text-white pl-3">Kontakt</a>
+                <div class="pt-4 border-t border-cardBorder">
+                    <a href="kontakt.html?subject=Projekt starten" class="block text-center bg-white text-black font-semibold py-3 rounded-full text-sm">
+                        Projekt starten
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg py-20 px-4">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                    <source src="assets/videos/Instagram (1)_3.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-5xl mx-auto text-center">
+                <span class="text-xs sm:text-sm font-semibold tracking-widest text-muted uppercase mb-4 block">C’EST MOI CREATIVE AGENCY · BIELEFELD</span>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mb-6 leading-none">
+                    WIR MACHEN DICH ZUR ERSTEN WAHL.
+                </h1>
+                <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                    Wir entwickeln Auftritte, die nicht nur gut aussehen, sondern im Kopf bleiben. Von der ersten Idee bis zum fertigen Ergebnis — Content, Film, Web & Performance aus einer Hand.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="referenzen.html" class="w-full sm:w-auto bg-white text-black font-semibold px-8 py-4 rounded-full text-base hover:bg-neutral-200 transition shadow-xl">
+                        Referenzen ansehen
+                    </a>
+                    <a href="kontakt.html" class="w-full sm:w-auto bg-cardBg border border-cardBorder text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-neutral-800 transition">
+                        Projekt anfragen
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED BY -->
+        <section class="py-16 border-y border-cardBorder bg-cardBg/50">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-xs uppercase tracking-widest text-muted mb-8 font-semibold">Vertraut von Marken, Businesses & Artists</p>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-70">
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">PILOTS PIZZERIA</div>
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">PORTOFINO</div>
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">ATRIUM KIEL</div>
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">ONE X AGENCY</div>
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">MAJESTIC CLUB</div>
+                    <div class="font-bold text-lg tracking-wider text-neutral-300">ROYAL CLUB</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 SERVICES -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-muted font-semibold block mb-2">Unsere Expertise</span>
+                <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight">Sechs Leistungsbereiche. Ein Standard.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">01</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Content Production</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Foto, Video, Commercial Content, Social Media Reels und hochauflösende Bildserien für Ihren Markenauftritt.</p>
+                    <a href="leistungen.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Mehr erfahren &rarr;</a>
+                </div>
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">02</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Music Videos</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Konzept, Regie, Dreh, Edit & Postproduktion für herausragende Musikvideos und Cover Artworks.</p>
+                    <a href="leistungen.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Mehr erfahren &rarr;</a>
+                </div>
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">03</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Webdesign</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Individuelle Websites, Landingpages, Webentwicklung und starkes Corporate Design mit optimaler UX.</p>
+                    <a href="leistungen.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Mehr erfahren &rarr;</a>
+                </div>
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">04</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Social Media</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Strategie, Content Creation, Account Management und zielgerichtete Kampagnen für organischen Wachstum.</p>
+                    <a href="leistungen.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Mehr erfahren &rarr;</a>
+                </div>
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">05</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Performance & Advertising</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Meta Ads, Creative Ads, Zielgruppenoptimierung und datengestützte Werbekampagnen mit echtem ROI.</p>
+                    <a href="leistungen.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Mehr erfahren &rarr;</a>
+                </div>
+                <div class="bg-cardBg border border-cardBorder p-8 rounded-2xl hover:border-neutral-500 transition group">
+                    <span class="text-xs font-mono text-muted mb-4 block">06</span>
+                    <h3 class="text-xl font-bold uppercase mb-3 group-hover:text-white transition">Creators & Models</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Casting, Brand Partnerships, professionelle Talente und maßgeschneiderte Model-Buchungen für Produktionen.</p>
+                    <a href="creators.html" class="text-xs font-semibold uppercase tracking-wider text-white flex items-center gap-2">Zum Katalog &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE C'EST MOI EFFECT -->
+        <section class="py-24 bg-cardBg border-y border-cardBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-muted font-semibold block mb-2">Der C’est Moi Effect</span>
+                    <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-6">Andere verkaufen einzelne Leistungen. Wir bauen den gesamten Auftritt.</h2>
+                    <p class="text-muted text-base leading-relaxed mb-8">
+                        Strategie, Creative, Produktion, Web und Performance — perfekt aufeinander abgestimmt. Wer heute aus der Masse herausstechen möchte, braucht keine zufälligen Einzelteile, sondern ein geschlossenes, hochwertiges Markenerlebnis.
+                    </p>
+                    <a href="ueber-uns.html" class="inline-block bg-white text-black font-semibold px-8 py-3.5 rounded-full text-sm hover:bg-neutral-200 transition">
+                        Mehr über uns erfahren
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg" alt="Model Red" class="rounded-xl object-cover h-80 w-full shadow-2xl cursor-pointer" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg', 'Model Shoot - Red')">
+                    <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (2)_4.jpg" alt="Model Blue" class="rounded-xl object-cover h-80 w-full shadow-2xl mt-8 cursor-pointer" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (2)_4.jpg', 'Model Shoot - Blue')">
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED REFERENCES -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-muted font-semibold block mb-2">Portfolio</span>
+                    <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight">Ausgewählte Referenzen</h2>
+                </div>
+                <a href="referenzen.html" class="mt-4 md:mt-0 text-sm font-semibold uppercase tracking-wider border-b border-white pb-1 hover:text-muted transition">
+                    Alle Referenzen ansehen &rarr;
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg', 'Musikvideo & Art Direction — Ela')">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (1)_4.jpeg" alt="Ela Musikvideo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Ela</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Musikvideo & Art Direction</h3>
+                        <p class="text-xs text-muted leading-relaxed">Atmosphärisches Musikvideo mit gezieltem roten Lichtset.</p>
+                    </div>
+                </div>
+                <div class="group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.39.26_3.jpg', 'Album Artwork & Campaign — Es tut mir leid')">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.39.26_3.jpg" alt="Es tut mir leid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Music Artist</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Album Artwork & Campaign</h3>
+                        <p class="text-xs text-muted leading-relaxed">„Es tut mir leid“ – High-End Produktion & Fotografie.</p>
+                    </div>
+                </div>
+                <div class="group cursor-pointer bg-cardBg border border-cardBorder rounded-2xl overflow-hidden" onclick="openLightbox('assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (3)_3.jpg', 'Live & Video Production — Production Shoot')">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="assets/images/WhatsApp Image 2026-09-29 at 20.44.58 (3)_3.jpg" alt="Studio Car Shoot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase tracking-widest text-muted block mb-1">Music & Campaign</span>
+                        <h3 class="text-lg font-bold uppercase mb-2">Production Shoot</h3>
+                        <p class="text-xs text-muted leading-relaxed">Exklusive Video- und Fotoshoot-Setups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-32 text-center max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">Let's create something people remember.</h2>
+            <p class="text-muted text-lg mb-10">Du hast eine Idee, eine Brand oder einen Song? Wir machen daraus etwas, das man sehen will.</p>
+            <a href="kontakt.html" class="inline-block bg-white text-black font-bold px-10 py-5 rounded-full text-base hover:bg-neutral-200 transition shadow-2xl">
+                Projekt anfragen
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-cardBg border-t border-cardBorder mt-20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <span class="text-xl font-black tracking-widest uppercase block mb-3">C’EST MOI</span>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        Creative Agency mit Sitz in Bielefeld. Wir entwickeln Auftritte, die nicht nur gut aussehen, sondern im Kopf bleiben.
+                    </p>
+                    <div class="text-xs text-muted">
+                        © 2026 C’EST MOI Agency.<br>Alle Rechte vorbehalten.
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="leistungen.html" class="hover:text-white transition">Leistungen</a></li>
+                        <li><a href="referenzen.html" class="hover:text-white transition">Referenzen</a></li>
+                        <li><a href="creators.html" class="hover:text-white transition">Creators & Models</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Agentur & Rechtliches</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="ueber-uns.html" class="hover:text-white transition">Über uns</a></li>
+                        <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Kontakt & Social</h4>
+                    <p class="text-sm text-muted mb-2">Bielefeld, Deutschland</p>
+                    <p class="text-sm text-muted mb-4">E-Mail: kontakt@cestmoi-agency.de</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-sm text-white bg-neutral-800 hover:bg-neutral-700 px-3 py-1.5 rounded-md transition">Instagram @cestmoiagency</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-cardBorder pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-muted">
+                <p>Multi-Page Implementation • C’EST MOI Creative Agency</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="impressum.html" class="hover:text-white transition">Impressum</a>
+                    <a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-bold bg-neutral-800 w-12 h-12 rounded-full flex items-center justify-center hover:bg-neutral-700 transition">&times;</button>
+        <div class="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Vollansicht" class="max-h-[75vh] object-contain rounded-lg shadow-2xl mb-4">
+            <p id="lightbox-caption" class="text-neutral-300 text-center text-sm font-medium"></p>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-aside">
-        <p class="eyebrow">Creative Agency</p>
-        <div>
-          <h1 class="hero-title">Wir machen dich zur ersten Wahl.</h1>
-          <p class="hero-copy">Wir entwickeln Auftritte, die nicht nur gut aussehen, sondern im Kopf bleiben. Von der ersten Idee bis zum fertigen Ergebnis – Content, Film, Web &amp; Performance aus einer Hand.</p>
-          <div class="hero-actions">
-            <a class="btn" href="kontakt.html">Projekt starten</a>
-            <a class="btn btn-ghost" href="projekte.html">Unsere Arbeiten</a>
-          </div>
-        </div>
-        <p class="hero-meta"><span>Bielefeld · Gütersloh · OWL</span><span>One vision. One agency.</span></p>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-frame">
-          <span>Brands.<br>People.<br>Stories.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="logo-rail" aria-label="Kunden">
-      <div class="wrap">
-        <p class="kicker">Vertraut von Marken, Artists und Unternehmen</p>
-      </div>
-      <div class="logo-track">
-        <span>Noir Atelier</span><span>Atlas Haus</span><span>Pulse Records</span><span>Maven Studio</span><span>Lumen Brand</span><span>Vista Club</span>
-        <span>Noir Atelier</span><span>Atlas Haus</span><span>Pulse Records</span><span>Maven Studio</span><span>Lumen Brand</span><span>Vista Club</span>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Leistungen</p>
-            <h2 class="display">Sechs Disziplinen. Ein Auftritt.</h2>
-          </div>
-          <a class="btn btn-ghost" href="leistungen.html">Alle Leistungen</a>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <div>
-              <span class="card-num">01</span>
-              <h3>Content Production</h3>
-            </div>
-            <ul>
-              <li>Reels</li>
-              <li>Foto</li>
-              <li>Video</li>
-              <li>Kampagnen</li>
-              <li>Commercial Content</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div>
-              <span class="card-num">02</span>
-              <h3>Music Videos</h3>
-            </div>
-            <ul>
-              <li>Konzept</li>
-              <li>Creative Direction</li>
-              <li>Dreh</li>
-              <li>Models</li>
-              <li>Editing</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div>
-              <span class="card-num">03</span>
-              <h3>Webdesign</h3>
-            </div>
-            <ul>
-              <li>Websites</li>
-              <li>Landingpages</li>
-              <li>Corporate Design</li>
-              <li>Responsive</li>
-              <li>Webentwicklung</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div>
-              <span class="card-num">04</span>
-              <h3>Social Media</h3>
-            </div>
-            <ul>
-              <li>Strategie</li>
-              <li>Content</li>
-              <li>Reels</li>
-              <li>Account Management</li>
-              <li>Creative Direction</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div>
-              <span class="card-num">05</span>
-              <h3>Performance &amp; Advertising</h3>
-            </div>
-            <ul>
-              <li>Meta Ads</li>
-              <li>Creative Ads</li>
-              <li>Kampagnen</li>
-              <li>Zielgruppen</li>
-              <li>Optimierung</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div>
-              <span class="card-num">06</span>
-              <h3>Creators &amp; Models</h3>
-            </div>
-            <ul>
-              <li>Casting</li>
-              <li>Models</li>
-              <li>Creators</li>
-              <li>Produktion</li>
-              <li>Brand Partnerships</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap effect">
-        <div>
-          <p class="kicker">The C'EST MOI Effect</p>
-          <h2 class="display">Andere verkaufen einzelne Leistungen. Wir bauen den gesamten Auftritt.</h2>
-        </div>
-        <div>
-          <p class="lead">Strategie, Creative, Produktion, Web und Performance – perfekt aufeinander abgestimmt. Eine Vision. Ein Look. Ein Team.</p>
-          <div class="chip-row">
-            <span class="chip">Strategy</span>
-            <span class="chip">Creative</span>
-            <span class="chip">Production</span>
-            <span class="chip">Web</span>
-            <span class="chip">Performance</span>
-          </div>
-          <p style="margin-top: 28px;"><a class="btn btn-ghost" href="ueber-uns.html">Mehr über uns</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Our Work</p>
-            <h2 class="display">Ausgewählte Projekte</h2>
-          </div>
-          <a class="btn btn-ghost" href="projekte.html">Alle Projekte ansehen</a>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-media p1"></div>
-            <div class="project-body">
-              <small>Music · Cover Artwork</small>
-              <h3>[Artist] – Es tut mir leid</h3>
-              <p>Creative Direction, Production, Artwork</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-media p2"></div>
-            <div class="project-body">
-              <small>Portrait Shoot</small>
-              <h3>Personal Brand</h3>
-              <p>Konzept, Lichtsetzung, Foto</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-media p3"></div>
-            <div class="project-body">
-              <small>Model Casting</small>
-              <h3>Unternehmen</h3>
-              <p>Casting, Lookbook, Content</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="wrap">
-        <h2 class="display">Let's create something people remember.</h2>
-        <p class="lead" style="margin: 0 auto 32px;">Du hast eine Idee, eine Brand oder einen Song? Wir machen daraus etwas, das man sehen will.</p>
-        <a class="btn" href="kontakt.html">Projekt anfragen</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <p class="logo-mark">C'EST MOI</p>
-        <p>Creative Agency · Bielefeld</p>
-      </div>
-      <div>
-        <h3>Kontakt</h3>
-        <a href="mailto:hello@cestmoi.agency">hello@cestmoi.agency</a>
-        <a href="tel:+495211234567">+49 521 123 4567</a>
-      </div>
-      <div>
-        <h3>Social</h3>
-        <a href="https://instagram.com/cestmoiagency_" target="_blank" rel="noreferrer">Instagram @cestmoiagency_</a>
-        <a href="https://www.tiktok.com/@cestmoiagency_" target="_blank" rel="noreferrer">TikTok</a>
-      </div>
-      <div>
-        <h3>Rechtliches</h3>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
-  <script src="assets/script.js"></script>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            if (lb && img) {
+                img.src = src;
+                cap.textContent = caption;
+                lb.classList.remove('hidden');
+                lb.classList.add('flex');
+            }
+        }
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            if (lb) {
+                lb.classList.add('hidden');
+                lb.classList.remove('flex');
+            }
+        }
+    </script>
 </body>
 </html>
