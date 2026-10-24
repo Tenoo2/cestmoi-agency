@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking — C’EST MOI</title>
+  <meta name="description" content="Anfrage für Artists, Models und Creators aus dem Portfolio von C’EST MOI.">
+  <link rel="icon" href="images/logo-cest-moi.jpeg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <div class="nav-backdrop" hidden></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">C’EST MOI</span>
+        <span class="logo-sub">— Agency —</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="projekte.html">Projekte</a>
+        <a class="is-active" href="booking.html" aria-current="page">Booking</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="btn btn-small" href="kontakt.html">Projekt starten <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <p class="kicker">Creators &amp; Models</p>
+      <h1 class="display">Booking.</h1>
+      <p class="lead" style="margin-top: 20px;">Casting, Models, Creators, Produktion und Brand Partnerships. Die Karten zeigen vorhandenes Bildmaterial. Namen, Gagen und Profile sind nicht hinterlegt – deshalb neutrale Bezeichnungen.</p>
+    </section>
+
+    <section class="wrap" style="padding-bottom: 48px;">
+      <div class="filter-row" role="group" aria-label="Kategorie filtern">
+        <button type="button" data-filter="all" aria-pressed="true">Alle</button>
+        <button type="button" data-filter="model" aria-pressed="false">Model / Runway</button>
+        <button type="button" data-filter="musik" aria-pressed="false">Musikvideo</button>
+        <button type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+        <button type="button" data-filter="creator" aria-pressed="false">Social Creator</button>
+      </div>
+
+      <div class="booking-grid">
+        <article class="booking-card" data-category="model commercial">
+          <div class="project-media">
+            <img src="images/hero-spotlight.jpeg" width="1650" height="2048" alt="Schwarz-weißes Spotlight-Portrait.">
+          </div>
+          <div class="body">
+            <small>Model</small>
+            <h2>Look 01</h2>
+            <p>Studio / Portrait</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 01">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="model">
+          <div class="project-media">
+            <img src="images/portrait-red.jpeg" width="1650" height="2048" alt="Rotes Studioportrait.">
+          </div>
+          <div class="body">
+            <small>Model</small>
+            <h2>Look 02</h2>
+            <p>Editorial / Portrait</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 02">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="model creator">
+          <div class="project-media">
+            <img src="images/portrait-blue.jpeg" width="1650" height="2048" alt="Blaue Studioaufnahme.">
+          </div>
+          <div class="body">
+            <small>Model</small>
+            <h2>Look 03</h2>
+            <p>Studio / Bewegung</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 03">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="model commercial">
+          <div class="project-media">
+            <img src="images/model-pink.jpeg" width="1043" height="1350" alt="Fashion-Aufnahme mit pinkem Kleid vor gelbem Hintergrund.">
+          </div>
+          <div class="body">
+            <small>Model</small>
+            <h2>Look 04</h2>
+            <p>Fashion / Campaign</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 04">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="commercial">
+          <div class="project-media">
+            <img src="images/model-studio.jpeg" width="1366" height="2048" alt="Studioaufnahme vor hellem Hintergrund.">
+          </div>
+          <div class="body">
+            <small>Casting</small>
+            <h2>Look 05</h2>
+            <p>Studio / Lookbook</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 05">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="musik">
+          <div class="project-media">
+            <img src="images/creator-hoodie.jpeg" width="1144" height="2048" alt="Stehendes Portrait in Hoodie und Cap.">
+          </div>
+          <div class="body">
+            <small>Artist / Creator</small>
+            <h2>Look 06</h2>
+            <p>Musikvideo / Content</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 06">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="musik">
+          <div class="project-media">
+            <img src="images/creator-fur.jpeg" width="1144" height="2048" alt="Aufnahme von hinten, Pelzmantel und Cap.">
+          </div>
+          <div class="body">
+            <small>Artist / Creator</small>
+            <h2>Look 07</h2>
+            <p>Musikvideo / Content</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 07">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="musik commercial">
+          <div class="project-media">
+            <img src="images/artists-car.jpeg" width="1144" height="2048" alt="Zwei Personen vor einem Auto.">
+          </div>
+          <div class="body">
+            <small>Campaign</small>
+            <h2>Look 08</h2>
+            <p>Location / Duo</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 08">Für Anfrage wählen</button>
+          </div>
+        </article>
+        <article class="booking-card" data-category="creator musik">
+          <div class="project-media">
+            <img src="images/live-atrium.jpeg" width="1206" height="801" alt="Live-Bühne mit Publikum.">
+          </div>
+          <div class="body">
+            <small>Live / Creator</small>
+            <h2>Look 09</h2>
+            <p>Bühne / Event</p>
+            <button class="btn btn-small" type="button" data-select-talent="Look 09">Für Anfrage wählen</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-bottom: 96px;" aria-labelledby="booking-form-title">
+      <h2 class="display" id="booking-form-title" style="font-size: clamp(36px, 5vw, 64px);">Anfrage</h2>
+      <p class="notice" style="margin: 20px 0 36px;">Kein Versanddienst hinterlegt. Nach dem Absenden werden die Angaben nicht übertragen. Bitte die Anfrage zusätzlich über Instagram @cestmoiagency_ senden.</p>
+      <form id="booking-form" data-form novalidate class="contact-layout">
+        <div>
+          <label>
+            Auswahl
+            <select id="talent" name="talent" required>
+              <option value="">Bitte wählen</option>
+              <option>Look 01</option>
+              <option>Look 02</option>
+              <option>Look 03</option>
+              <option>Look 04</option>
+              <option>Look 05</option>
+              <option>Look 06</option>
+              <option>Look 07</option>
+              <option>Look 08</option>
+              <option>Look 09</option>
+              <option>Noch offen / Casting</option>
+            </select>
+          </label>
+          <label>
+            Projekttyp
+            <select id="type" name="type" required>
+              <option value="">Bitte wählen</option>
+              <option>Musikvideo</option>
+              <option>Commercial</option>
+              <option>Runway / Model</option>
+              <option>Social Media Creator</option>
+              <option>Anderes</option>
+            </select>
+          </label>
+          <label>
+            Zeitraum
+            <input id="period" type="text" name="period" placeholder="z. B. November 2026">
+          </label>
+          <label>
+            Grobes Budget
+            <input id="budget" type="text" name="budget">
+          </label>
+        </div>
+        <div>
+          <label>
+            Name
+            <input id="booking-name" type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            E-Mail
+            <input id="booking-email" type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Nachricht
+            <textarea id="booking-message" name="message" required></textarea>
+          </label>
+          <button class="btn" type="submit">Anfrage vorbereiten</button>
+          <p class="form-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo-mark">C’EST MOI</p>
+        <p>Creative Agency · Bielefeld</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <a href="kontakt.html">Projekt anfragen</a>
+        <p>E-Mail und Telefon nach Bestätigung.</p>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <a href="https://www.instagram.com/cestmoiagency_/" rel="noreferrer" target="_blank">Instagram @cestmoiagency_</a>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
