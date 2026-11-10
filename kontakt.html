@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Kontakt — C’EST MOI</title>
+  <meta name="description" content="Projekt anfragen bei C’EST MOI Creative Agency in Bielefeld – Nummer hinterlassen, wir melden uns.">
+  <link rel="icon" href="images/site/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <div class="nav-backdrop" hidden></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">C’EST MOI</span>
+        <span class="logo-sub">— Agency —</span>
+      </a>
+      <a class="header-cta" href="kontakt.html">Anfragen</a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="booking.html">Booking</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a class="is-active" href="kontakt.html" aria-current="page">Kontakt</a>
+        <a class="btn btn-small" href="kontakt.html">Projekt starten <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap contact-grid">
+      <div class="contact-intro">
+        <p class="kicker">Kontakt</p>
+        <h1 class="display">Du führst ein Unternehmen, hast eine Brand oder eine Idee?</h1>
+        <p class="lead">Schreib uns – wir machen daraus etwas, das man sehen will.</p>
+      </div>
+
+      <!--
+        VERSAND EINRICHTEN (einmalig, kostenlos):
+        1. Auf https://formspree.io ein Formular anlegen (mit der Agentur-E-Mail).
+        2. Den Link "https://formspree.io/f/xxxxxxx" kopieren und unten bei action einsetzen
+           (DEINE_FORM_ID ersetzen). Gleiches in booking.html.
+        Danach landen alle Anfragen direkt im Postfach.
+      -->
+      <form class="form-card" id="contact-form" data-form novalidate
+            action="https://formspree.io/f/DEINE_FORM_ID" method="POST"
+            data-success="Danke! Wir melden uns schnellstmöglich bei dir.">
+        <h2>Wir rufen dich zurück.</h2>
+        <input type="hidden" name="_subject" value="Neue Anfrage – Website C’EST MOI">
+        <label>
+          Name
+          <input id="name" type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>E-Mail <span class="optional">(optional)</span></span>
+          <input id="email" type="email" name="email" autocomplete="email">
+        </label>
+        <label>
+          Telefonnummer
+          <input id="phone" type="tel" name="telefon" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          <span>Nachricht <span class="optional">(optional)</span></span>
+          <textarea id="message" name="nachricht" rows="3" placeholder="Worum geht’s?"></textarea>
+        </label>
+        <label class="hp-field" aria-hidden="true">
+          Bitte leer lassen
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </label>
+        <button class="btn btn-dark btn-block" type="submit">Anfrage senden</button>
+        <p class="form-note">Mit dem Absenden nutzen wir deine Angaben nur, um dich zu deiner Anfrage zu kontaktieren. <a href="datenschutz.html">Datenschutz</a></p>
+        <p class="form-status" role="status"></p>
+      </form>
+
+      <div class="contact-direct">
+        <div>
+          <p>Standort</p>
+          <span>Bielefeld · Gütersloh · OWL</span>
+        </div>
+        <div>
+          <p>Social</p>
+          <a href="https://www.instagram.com/cestmoiagency_/" rel="noreferrer" target="_blank">Instagram @cestmoiagency_</a>
+        </div>
+        <div>
+          <p>Booking</p>
+          <a href="booking.html">Models, Creators &amp; Influencer anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo-mark">C’EST MOI</p>
+        <p>Creative Agency · Bielefeld</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <a href="kontakt.html">Projekt anfragen</a>
+        <p>E-Mail und Telefon nach Bestätigung.</p>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <a href="https://www.instagram.com/cestmoiagency_/" rel="noreferrer" target="_blank">Instagram @cestmoiagency_</a>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>

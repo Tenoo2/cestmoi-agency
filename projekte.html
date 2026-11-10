@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Projekte — C’EST MOI</title>
+  <meta name="description" content="Cases von C’EST MOI: Brands, Social &amp; Creator, Music, Models, Personal Branding und Web.">
+  <link rel="icon" href="images/site/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <div class="nav-backdrop" hidden></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">C’EST MOI</span>
+        <span class="logo-sub">— Agency —</span>
+      </a>
+      <a class="header-cta" href="kontakt.html">Anfragen</a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a class="is-active" href="projekte.html" aria-current="page">Projekte</a>
+        <a href="booking.html">Booking</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="btn btn-small" href="kontakt.html">Projekt starten <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="is-paper">
+    <section class="page-hero wrap">
+      <p class="kicker">Our Work</p>
+      <h1 class="display">Cases.</h1>
+      <p class="lead">Ausgewählte Projekte – vom Konzept bis zum fertigen Content.</p>
+      <div class="filter-row" role="group" aria-label="Kategorie filtern" data-filter-for="#case-list">
+        <button type="button" data-filter="all" aria-pressed="true">Alle</button>
+        <button type="button" data-filter="brands" aria-pressed="false">Brands</button>
+        <button type="button" data-filter="social" aria-pressed="false">Social &amp; Creator</button>
+        <button type="button" data-filter="music" aria-pressed="false">Music</button>
+        <button type="button" data-filter="models" aria-pressed="false">Models</button>
+        <button type="button" data-filter="personal" aria-pressed="false">Personal Branding</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+      </div>
+    </section>
+
+    <!--
+      CASES PFLEGEN
+      - Ein <article class="case"> = ein Projekt. data-category: brands, social, music, models, personal, web
+        (mehrere mit Leerzeichen trennen).
+      - Bilder/Videos in .case-track: so viele wie gewünscht, man wischt durch.
+        Bilder: images/projekte/<case>/ · Videos: videos/projekte/ (MP4, H.264)
+      - Platzhalter in [eckigen Klammern] durch echte Namen ersetzen.
+    -->
+    <section class="wrap cases-section">
+      <div class="case-list" id="case-list">
+
+        <!-- BIG N: Videos in videos/projekte/, Bilder in images/projekte/big-n/ -->
+        <article class="case" id="case-big-n" data-category="music social">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item is-video">
+                <video controls playsinline preload="none" poster="images/site/posters/big-n-street.jpg" aria-label="Video mit Big N: Street-Format">
+                  <source src="videos/projekte/big-n-street.mp4" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="case-item is-video">
+                <video controls playsinline preload="none" poster="images/site/posters/big-n-food.jpg" aria-label="Video mit Big N: Food-Format, Folge 1">
+                  <source src="videos/projekte/big-n-food-folge-1.mp4" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="case-item is-wide">
+                <img src="images/projekte/big-n/live-atrium.jpg" width="1206" height="801" alt="Big N live im Atrium, Publikum mit Handylichtern." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/big-n/stage.jpg" width="387" height="516" alt="Big N auf der Bühne mit Mikrofon." loading="lazy">
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+              <div class="case-arrows">
+                <button class="round-btn" type="button" data-case-prev aria-label="Vorheriges Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+                <button class="round-btn" type="button" data-case-next aria-label="Nächstes Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Artist Content</p>
+            <h2 class="case-title">Big N</h2>
+            <p class="case-line">Street-Format, das neue Food-Format und Live-Shots – Content, der die Persönlichkeit des Artists in den Feed bringt.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Social Content, Reels, Live-Fotografie</dd></div>
+              <div><dt>Ort</dt><dd>Atrium Kiel / Schwentinental</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <!-- Musikvideo vorhanden? Als videos/projekte/es-tut-mir-leid.mp4 ablegen und hier als erstes case-item einfügen. -->
+        <article class="case" id="case-music" data-category="music">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item">
+                <img src="images/projekte/es-tut-mir-leid/cover.jpg" width="1600" height="1600" alt="Cover Es tut mir leid: zwei Personen, Auto, Rosenboden." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/es-tut-mir-leid/artists.jpg" width="894" height="1600" alt="Die beiden Artists vor einem Auto in einer Betonhalle." loading="lazy">
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+              <div class="case-arrows">
+                <button class="round-btn" type="button" data-case-prev aria-label="Vorheriges Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+                <button class="round-btn" type="button" data-case-next aria-label="Nächstes Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Music</p>
+            <h2 class="case-title">[Artist] – Es tut mir leid</h2>
+            <p class="case-line">Release aus einem Guss: Cover und Promo-Stills im selben Look.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Cover Artwork, Promo-Stills, Creative Direction</dd></div>
+              <div><dt>Kunde</dt><dd>[Artist]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <!-- BITTE PRÜFEN: Ist restaurant-reel.mp4 wirklich Portofino? Sonst Titel anpassen. -->
+        <article class="case" id="case-portofino" data-category="brands social">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item is-video">
+                <video controls playsinline preload="none" poster="images/site/posters/restaurant.jpg" aria-label="Social-Reel für das Restaurant Portofino">
+                  <source src="videos/projekte/restaurant-reel.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Brands</p>
+            <h2 class="case-title">Portofino</h2>
+            <p class="case-line">Reels für ein Restaurant – nahbar, schnell geschnitten, gemacht für den Feed.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Social Content, Reels, Editing</dd></div>
+              <div><dt>Branche</dt><dd>Gastronomie</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <article class="case" id="case-sketch" data-category="brands social">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item is-video">
+                <video controls playsinline preload="none" poster="images/site/posters/sketch.jpg" aria-label="Sketch-Reel in einem Büro">
+                  <source src="videos/projekte/sketch-reel.mp4" type="video/mp4">
+                </video>
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Brands · Social</p>
+            <h2 class="case-title">[Unternehmen]</h2>
+            <p class="case-line">Sketch-Reel mit dem Team vor Ort – Humor statt Hochglanz, gemacht für Reichweite.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Konzept, Social Content, Reels</dd></div>
+              <div><dt>Kunde</dt><dd>[Unternehmen]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <article class="case" id="case-models" data-category="models brands">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item">
+                <img src="images/projekte/models/lookbook.jpg" width="1200" height="1600" alt="Aufgeschlagenes Lookbook mit vier Model-Posen." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/models/02.jpg" width="1043" height="1350" alt="Model in pinkem Kleid vor gelbem Hintergrund." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/models/01.jpg" width="1067" height="1600" alt="Model im Studio, Polohemd und Jeans." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/models/03.jpg" width="1067" height="1600" alt="Model auf einem Barhocker im Studio." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/models/04.jpg" width="1067" height="1600" alt="Model in schwarzem Shirt und Stoffhose im Studio." loading="lazy">
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+              <div class="case-arrows">
+                <button class="round-btn" type="button" data-case-prev aria-label="Vorheriges Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+                <button class="round-btn" type="button" data-case-next aria-label="Nächstes Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Models</p>
+            <h2 class="case-title">[Unternehmen]</h2>
+            <p class="case-line">Casting und Lookbook – passende Gesichter für Marke und Kampagne.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Casting, Lookbook, Content</dd></div>
+              <div><dt>Kunde</dt><dd>[Unternehmen]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="booking.html">Models ansehen</a>
+          </div>
+        </article>
+
+        <article class="case" id="case-personal" data-category="personal models">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item">
+                <img src="images/projekte/personal/01.jpg" width="1289" height="1600" alt="Studioportrait in rotem Licht." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/personal/02.jpg" width="1289" height="1600" alt="Silhouette vor blauem Hintergrund." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/personal/03.jpg" width="1289" height="1600" alt="Schwarz-weiße Aufnahme im Spotlight." loading="lazy">
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+              <div class="case-arrows">
+                <button class="round-btn" type="button" data-case-prev aria-label="Vorheriges Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+                <button class="round-btn" type="button" data-case-next aria-label="Nächstes Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Personal Branding</p>
+            <h2 class="case-title">[Kundin]</h2>
+            <p class="case-line">Drei Lichtstimmungen, ein Gesicht: Bildwelt für einen starken persönlichen Auftritt.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Konzept, Lichtsetzung, Foto</dd></div>
+              <div><dt>Kunde</dt><dd>[Kundin / Personal Brand]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <article class="case" id="case-creator" data-category="social">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item">
+                <img src="images/projekte/creator/01.jpg" width="894" height="1600" alt="Creator in Hoodie und Cap im Studio." loading="lazy">
+              </figure>
+              <figure class="case-item">
+                <img src="images/projekte/creator/02.jpg" width="894" height="1600" alt="Creator im Fellmantel im Studio." loading="lazy">
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+              <div class="case-arrows">
+                <button class="round-btn" type="button" data-case-prev aria-label="Vorheriges Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+                <button class="round-btn" type="button" data-case-next aria-label="Nächstes Bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Social &amp; Creator</p>
+            <h2 class="case-title">[Creator]</h2>
+            <p class="case-line">Studio-Content für Creator, die im Feed auffallen wollen.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Studio-Shooting, Styling, Content</dd></div>
+              <div><dt>Kunde</dt><dd>[Creator]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Ähnliches Projekt anfragen</a>
+          </div>
+        </article>
+
+        <!-- WEB: Screenshot der Website als images/projekte/web-ibrahim.jpg ablegen (Querformat, z. B. 1600 × 1000).
+             Bis dahin wird ein neutrales Browser-Mockup gezeigt. -->
+        <article class="case" id="case-web" data-category="web">
+          <div class="case-media" data-case-media>
+            <div class="case-track">
+              <figure class="case-item is-wide is-shot" style="background: #0a0a0a;">
+                <img src="images/projekte/web-ibrahim.jpg" alt="Screenshot der Website für [Kunde]." loading="lazy"
+                     onerror="this.parentNode.classList.remove('is-shot');this.remove()">
+                <div class="browser-card" aria-hidden="true">
+                  <div class="browser-copy">Brands<br>People<br>Stories<span></span></div>
+                  <img src="images/site/webdesign-card.jpg" width="1289" height="1600" alt="" loading="lazy">
+                </div>
+              </figure>
+            </div>
+            <div class="case-controls">
+              <div class="case-dots" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-cat">Web</p>
+            <h2 class="case-title">[Ibrahim] Website</h2>
+            <p class="case-line">Website mit klarem Look – schnell, responsive und auf Anfragen ausgelegt.</p>
+            <dl class="case-facts">
+              <div><dt>Leistungen</dt><dd>Webdesign, Entwicklung, Responsive</dd></div>
+              <div><dt>Link</dt><dd>[www.beispiel.de]</dd></div>
+            </dl>
+            <a class="btn btn-outline-dark" href="kontakt.html">Website anfragen</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo-mark">C’EST MOI</p>
+        <p>Creative Agency · Bielefeld</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <a href="kontakt.html">Projekt anfragen</a>
+        <p>E-Mail und Telefon nach Bestätigung.</p>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <a href="https://www.instagram.com/cestmoiagency_/" rel="noreferrer" target="_blank">Instagram @cestmoiagency_</a>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
