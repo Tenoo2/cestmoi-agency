@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Model Booking — C’EST MOI</title>
+  <meta name="description" content="Models, Creators und Influencer für Kampagne, Musikvideo und Content – über C’EST MOI anfragen.">
+  <link rel="icon" href="images/logo-cest-moi.jpeg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <div class="nav-backdrop" hidden></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">C’EST MOI</span>
+        <span class="logo-sub">— Agency —</span>
+      </a>
+      <a class="header-cta" href="kontakt.html">Anfragen</a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="projekte.html">Projekte</a>
+        <a class="is-active" href="booking.html" aria-current="page">Booking</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="btn btn-small" href="kontakt.html">Projekt starten <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <p class="kicker">Model Booking</p>
+      <h1 class="display">Booking.</h1>
+      <p class="lead">Models, Creators und Influencer für Kampagne, Musikvideo und Content.</p>
+    </section>
+
+    <section class="wrap" style="padding-bottom: 88px;" data-story aria-label="Profile">
+      <div class="filter-row" role="group" aria-label="Kategorie wählen">
+        <button type="button" data-story-filter="all" aria-pressed="true">Alle</button>
+        <button type="button" data-story-filter="model" aria-pressed="false">Models</button>
+        <button type="button" data-story-filter="creator" aria-pressed="false">Creators</button>
+        <button type="button" data-story-filter="influencer" aria-pressed="false">Influencer</button>
+      </div>
+
+      <div class="story-layout">
+        <div class="story-frame no-js">
+          <!--
+            PROFILE PFLEGEN
+            - Ein <article class="story-profile"> = eine Person.
+            - data-name: Name, der angezeigt wird (z. B. "Malak").
+            - data-category: model, creator und/oder influencer (mehrere mit Leerzeichen trennen).
+              Musiker bitte als "creator influencer" eintragen.
+            - Beliebig viele <img> pro Person: Tippen/Wischen zeigt das nächste Bild,
+              nach dem letzten Bild kommt automatisch das nächste Profil.
+          -->
+          <article class="story-profile" data-name="Model 01" data-category="model">
+            <img src="images/portrait-red.jpeg" width="1650" height="2048" alt="Model 01, Studioportrait in rotem Licht.">
+            <img src="images/portrait-blue.jpeg" width="1650" height="2048" alt="Model 01, Silhouette vor blauem Hintergrund." loading="lazy">
+            <img src="images/hero-spotlight.jpeg" width="1650" height="2048" alt="Model 01, Schwarz-weiß-Aufnahme im Spotlight." loading="lazy">
+          </article>
+          <article class="story-profile" data-name="Model 02" data-category="model">
+            <img src="images/model-pink.jpeg" width="1043" height="1350" alt="Model 02 in pinkem Kleid vor gelbem Hintergrund." loading="lazy">
+          </article>
+          <article class="story-profile" data-name="Model 03" data-category="model">
+            <img src="images/model-studio.jpeg" width="1366" height="2048" alt="Model 03 im Studio, Polohemd und Jeans." loading="lazy">
+          </article>
+          <article class="story-profile" data-name="Creator 01" data-category="creator influencer">
+            <img src="images/creator-hoodie.jpeg" width="1144" height="2048" alt="Creator 01 in Hoodie und Cap." loading="lazy">
+            <img src="images/creator-fur.jpeg" width="1144" height="2048" alt="Creator 01 im Fellmantel." loading="lazy">
+          </article>
+          <article class="story-profile" data-name="Artist Duo" data-category="creator influencer">
+            <img src="images/artists-car.jpeg" width="1144" height="2048" alt="Zwei Artists vor einem Auto in einer Betonhalle." loading="lazy">
+            <img src="images/cover-es-tut-mir-leid.jpeg" width="2048" height="2048" alt="Cover Es tut mir leid mit den beiden Artists." loading="lazy">
+          </article>
+
+          <div class="story-progress" aria-hidden="true"></div>
+          <button class="story-tap story-tap-prev" type="button" aria-label="Vorheriges Bild">
+            <span class="story-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+            </span>
+          </button>
+          <button class="story-tap story-tap-next" type="button" aria-label="Nächstes Bild">
+            <span class="story-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+            </span>
+          </button>
+          <div class="story-meta">
+            <div>
+              <span class="story-cat"></span>
+              <p class="story-name"></p>
+            </div>
+            <button class="btn btn-small" type="button" data-story-select>Anfragen</button>
+          </div>
+          <p class="story-empty" hidden>In dieser Kategorie sind gerade keine Profile online.</p>
+          <p class="sr-only story-live" aria-live="polite"></p>
+        </div>
+
+        <aside class="story-panel">
+          <div>
+            <p class="kicker">So funktioniert’s</p>
+            <p class="story-hint">Tippe rechts für das nächste Bild, links für das vorherige – oder wische. Danach kommt direkt das nächste Profil.</p>
+          </div>
+          <p class="story-count" aria-live="polite"></p>
+          <div class="story-avatars" aria-label="Profil wählen"></div>
+          <div class="story-steps">
+            <button class="round-btn" type="button" data-story-prev-profile aria-label="Vorheriges Profil" style="border-color: var(--line-strong);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+            </button>
+            <button class="round-btn" type="button" data-story-next-profile aria-label="Nächstes Profil" style="border-color: var(--line-strong);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-bottom: 112px;" aria-labelledby="booking-form-title">
+      <div class="contact-grid" style="padding-top: 0;">
+        <div class="contact-intro">
+          <p class="kicker">Anfrage</p>
+          <h2 class="display" id="booking-form-title">Profil gefunden?</h2>
+          <p class="lead">Nummer da lassen – wir melden uns mit Verfügbarkeit und Konditionen.</p>
+        </div>
+        <!-- Versand: action-Adresse durch deinen Formspree-Link ersetzen (siehe kontakt.html). -->
+        <form class="form-card" id="booking-form" data-form novalidate
+              action="https://formspree.io/f/DEINE_FORM_ID" method="POST"
+              data-success="Danke! Wir melden uns schnellstmöglich bei dir.">
+          <input type="hidden" name="_subject" value="Neue Booking-Anfrage – Website">
+          <label>
+            Profil
+            <select id="talent" name="profil">
+              <option value="">Bitte wählen</option>
+              <option value="Noch offen">Noch offen / Casting</option>
+            </select>
+          </label>
+          <label>
+            Name
+            <input id="booking-name" type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Telefonnummer
+            <input id="booking-phone" type="tel" name="telefon" autocomplete="tel" inputmode="tel" required>
+          </label>
+          <label>
+            <span>E-Mail <span class="optional">(optional)</span></span>
+            <input id="booking-email" type="email" name="email" autocomplete="email">
+          </label>
+          <label>
+            <span>Nachricht <span class="optional">(optional)</span></span>
+            <textarea id="booking-message" name="nachricht" rows="3" placeholder="Projekt, Zeitraum, Ort"></textarea>
+          </label>
+          <label class="hp-field" aria-hidden="true">
+            Bitte leer lassen
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+          <button class="btn btn-dark btn-block" type="submit">Anfrage senden</button>
+          <p class="form-note">Mit dem Absenden nutzen wir deine Angaben nur, um dich zu deiner Anfrage zu kontaktieren. <a href="datenschutz.html">Datenschutz</a></p>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="logo-mark">C’EST MOI</p>
+        <p>Creative Agency · Bielefeld</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <a href="kontakt.html">Projekt anfragen</a>
+        <p>E-Mail und Telefon nach Bestätigung.</p>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <a href="https://www.instagram.com/cestmoiagency_/" rel="noreferrer" target="_blank">Instagram @cestmoiagency_</a>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
